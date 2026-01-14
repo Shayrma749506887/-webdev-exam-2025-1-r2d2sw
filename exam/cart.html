@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Корзина — МПТВ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-left">
+        <a href="index.html" class="logo">МПТВ</a>
+      </div>
+      <div class="header-center"></div>
+      <div class="header-right">
+        <a href="index.html" class="icon-button" aria-label="Каталог">
+          <img src="img/corz.jpg" style="width: 40px; height: 40px; border-radius: 8px;">
+        </a>
+        <a href="account.html" class="icon-button" aria-label="Личный кабинет">
+          <img src="img/lk.jpg" style="width: 40px; height: 40px; border-radius: 8px;">
+        </a>
+      </div>
+    </header>
+
+    <div class="notification-container" id="notification-container"></div>
+
+    <main class="main main-cart">
+      <section class="cart-section">
+        <h1 class="cart-title">Корзина</h1>
+        <div class="cart-empty" id="cart-empty">
+          Корзина пуста. Перейдите в <a href="index.html">каталог</a>, чтобы добавить товары.
+        </div>
+        <div class="cart-grid" id="cart-grid"></div>
+      </section>
+
+      <section class="order-section">
+        <h2 class="order-title">Оформление заказа</h2>
+        <form class="order-form" id="order-form">
+          <div class="order-grid">
+            <div class="field">
+              <label for="order-name">Имя</label>
+              <input id="order-name" name="name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="order-address">Адрес доставки</label>
+              <input id="order-address" name="address" type="text" required>
+            </div>
+            <div class="field">
+              <label for="order-phone">Номер телефона</label>
+              <input id="order-phone" name="phone" type="text" required>
+            </div>
+            <div class="field">
+              <label for="order-date">Дата доставки</label>
+              <input id="order-date" name="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="order-email">Email</label>
+              <input id="order-email" name="email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="order-slot">Временной интервал доставки</label>
+              <select id="order-slot" name="slot" required>
+                <option value="" selected disabled>Выберите интервал</option>
+                <option value="10:00-14:00">10:00-14:00</option>
+                <option value="14:00-18:00">14:00-18:00</option>
+                <option value="18:00-22:00">18:00-22:00</option>
+              </select>
+            </div>
+            <div class="field field-checkbox">
+              <label class="checkbox-row">
+                <input id="order-mailing" name="mailing" type="checkbox">
+                <span>Подписаться на рассылку</span>
+              </label>
+            </div>
+            <div class="field field-textarea">
+              <label for="order-comment">Комментарий</label>
+              <textarea id="order-comment" name="comment" rows="4"></textarea>
+            </div>
+          </div>
+
+          <div class="order-summary">
+            <div class="order-total" id="order-total"></div>
+            <div class="order-delivery" id="order-delivery"></div>
+          </div>
+
+          <div class="order-actions">
+            <button class="button button-secondary" type="reset" id="order-reset">Сбросить</button>
+            <button class="button button-primary" type="submit" id="order-submit">Оформить</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© 2025 МПТВ</span>
+        <span>Телефон: +7 (900) 000-00-00 • email: info@mptv.ru</span>
+      </div>
+    </footer>
+  </div>
+  <script src="cart.js"></script>
+</body>
+</html>
+
+
