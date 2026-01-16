@@ -1,4 +1,4 @@
-const API_BASE = "http://api.std-900.ist.mospolytech.ru/exam-2024-1/api";
+const API_BASE = "https://edu.std-900.ist.mospolytech.ru/exam-2024-1/api";
 const API_KEY = "4d54f5ce-e1a1-4554-bd67-70c06b301d2b";
 const DELIVERY_BASE = 200;
 
